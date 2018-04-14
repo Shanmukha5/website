@@ -20,12 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '9@327w8vwrwc+!a)!8q=vgxf@p_3v3b!eqs9q*pm(*@x+4ii-z'
-#SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','9@327w8vwrwc+!a)!8q=vgxf@p_3v3b!eqs9q*pm(*@x+4ii-z')
+#SECRET_KEY = '9@327w8vwrwc+!a)!8q=vgxf@p_3v3b!eqs9q*pm(*@x+4ii-z'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','9@327w8vwrwc+!a)!8q=vgxf@p_3v3b!eqs9q*pm(*@x+4ii-z')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-#DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
+#DEBUG = True
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
 ALLOWED_HOSTS = []
 
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -136,3 +137,8 @@ MEDIA_URL = '/media/'
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
+
+# Simplified static file serving.
+# https://warehouse.python.org/project/whitenoise/
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
