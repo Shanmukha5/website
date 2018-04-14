@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','9@327w8vwrwc+!a)!8q=vgxf@p_3v3b
 #DEBUG = True
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['guarded-fjord-56807.herokuapp.com']
 
 
 # Application definition
