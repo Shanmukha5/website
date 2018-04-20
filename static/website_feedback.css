@@ -1,0 +1,24 @@
+@import 'https://fonts.googleapis.com/css?family=ABeeZee';
+
+body {
+	background-color: rgb(64,64,64);
+}
+
+h1 {
+	text-align: center;
+	padding-bottom: 30px;
+	padding-top: 5px;
+	font-size: 60px;
+	padding-top: 30px;
+
+}
+
+#frame {
+	font-family: 'ABeeZee'
+	border: solid 2px;
+	padding-bottom: 40px;
+	background-color: rgb(224,224,224);
+	padding-right: 60px;
+}
+
+

@@ -1,21 +1,18 @@
 {% load staticfiles %}
 <link rel="stylesheet" type="text/css" href="https://fonts.google.com/?query=abee&selection.family=ABeeZee">
-<link rel="stylesheet" type="text/css" href="{% static 'website_contact.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'website_comingsoon.css' %}" />
 <html>
 	<head>
 		<title>Django Website | Contact</title>
 	</head>
 
 	<body>
-		<h1 class="top">Contact Form</h1>
-
-		<form method='POST' class="frame">
-			{% csrf_token %}
-			{{ form.as_p }}
-			<input type='submit' value='Submit'>
+		<h1>Contact</h1>
+		<div class="section">
+			<p>We are Coming Soon...</p>
+		</div>
 
 
-		</form>
 	</body>
 
 </html>
